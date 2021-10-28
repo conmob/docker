@@ -1,0 +1,10 @@
+#!/bin/bash -e
+
+export DOCKER_VERSION="19.03"
+export DOCKER_COMPOSE_VERSION="1.29.2"
+
+export CONTAINER_VERSION="${DOCKER_VERSION}-docker-compose"
+export CONTAINER_REGISTRY_PUSH=1
+export CONTAINER_REGISTRY_PATH="registry-1.docker.io/conmob/docker"
+export CONTAINER_REGISTRY_USERNAME="xxx"
+export CONTAINER_REGISTRY_PASSWORD="xxx"
