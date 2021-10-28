@@ -13,6 +13,8 @@ docker login "${CONTAINER_REGISTRY_PATH}" \
 --password-stdin
 
 docker build . \
+--build-arg DOCKER_VERSION \
+--build-arg DOCKER_COMPOSE_VERSION \
 --file Dockerfile \
 --tag "${CONTAINER_REGISTRY_PATH}:${CONTAINER_VERSION}"
 
