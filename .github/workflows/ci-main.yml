@@ -16,7 +16,6 @@ jobs:
       env:
         DOCKER_VERSION: 19.03
         DOCKER_COMPOSE_VERSION: 1.29.2
-        CONTAINER_VERSION: 19.03-docker-compose
         CONTAINER_REGISTRY_PUSH: 1
         CONTAINER_REGISTRY_PATH: registry-1.docker.io/conmob/docker
         CONTAINER_REGISTRY_USERNAME: ${{ secrets.CONTAINER_REGISTRY_USERNAME }}
