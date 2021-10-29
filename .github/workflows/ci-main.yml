@@ -10,10 +10,10 @@ jobs:
     strategy:
       matrix:
         DOCKER_VERSION:
-        - 19.03
-        - 20.10
+        - "19.03"
+        - "20.10"
         DOCKER_COMPOSE_VERSION:
-        - 1.29.2
+        - "1.29.2"
     steps:
     - uses: actions/checkout@v2
       with:
