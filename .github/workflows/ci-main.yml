@@ -7,6 +7,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        DOCKER_VERSION:
+        - 19.03
+        - 20.10
+        DOCKER_COMPOSE_VERSION:
+        - 1.29.2
     steps:
     - uses: actions/checkout@v2
       with:
@@ -14,8 +21,8 @@ jobs:
     - name: package
       run: source 10-package.sh
       env:
-        DOCKER_VERSION: 19.03
-        DOCKER_COMPOSE_VERSION: 1.29.2
+        DOCKER_VERSION: ${{ matrix.DOCKER_VERSION }}
+        DOCKER_COMPOSE_VERSION: ${{ matrix.DOCKER_COMPOSE_VERSION }}
         CONTAINER_REGISTRY_PUSH: 1
         CONTAINER_REGISTRY_PATH: registry-1.docker.io/conmob/docker
         CONTAINER_REGISTRY_USERNAME: ${{ secrets.CONTAINER_REGISTRY_USERNAME }}
