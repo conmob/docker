@@ -13,7 +13,7 @@ docker login "${CONTAINER_REGISTRY_PATH}" \
 --username "${CONTAINER_REGISTRY_USERNAME}" \
 --password-stdin
 
-export CONTAINER_TAG="${DOCKER_VERSION}-docker-compose"
+export CONTAINER_TAG="${DOCKER_VERSION}-docker-compose-${DOCKER_COMPOSE_VERSION}"
 docker build . \
 --build-arg DOCKER_VERSION \
 --build-arg DOCKER_COMPOSE_VERSION \
